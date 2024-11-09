@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dombra bought</title>
+    <style>
+       body{
+        background-color: #225C80;
+        overflow-x: hidden;
+        height: 80vh; 
+        margin: 0;
+       }
+        header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    right: 10px;
+}
+
+header p{
+    border: 2px solid  white;
+    border-radius: 40px;
+    padding: 8px 12px;
+    cursor: pointer;
+    color:white;
+    position: relative;
+    top: 40px;
+    
+}
+
+header h1{
+    font-family: "Anton", sans-serif;
+    position: relative;
+    top: 40px;
+}
+
+.content{
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 40px;
+    position: relative;
+    left: -30px;
+   
+}
+
+.item{
+    height: 400px;
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    left: 220px;
+    top: 120px;
+    transition: transform 0.3s ease, z-index 0.3s ease; 
+    overflow: hidden; 
+   
+}
+
+.item:hover {
+    transform: scale(1.2); 
+    z-index: 5; 
+}
+
+.price, .dombra, .uru, .kobyz, .drums, .uku, .gitara, .button-img{
+    position: relative;
+    z-index: 6;
+}
+.item_1{
+    width: 300px;
+    position: relative;
+    left: 280px;
+}
+.item_1 img{
+    width: 70%;
+    position: relative;
+    top: 40px;
+    left: 45px;
+    border-radius: 14px;
+    
+}
+
+.item_2{
+    width: 300px;
+    position: relative;
+    left: 620px;
+}
+
+.item_2 img{
+    width: 70%;
+    position: relative;
+    left: 40px;
+    top: 30px;
+    border-radius: 15px;
+}
+
+.item_3{
+    width: 300px;
+    position: relative;
+    left:-55px;
+}
+
+.item_3 img{
+    width: 200px;
+    position: relative;
+    left: 50px;
+    top: 40px;
+}
+
+.item_4{
+    width: 300px;
+    position: relative;
+    left: 280px;
+}
+.item_4 img{
+    width: 70%;
+    position: relative;
+    top: 40px;
+    left: 45px;
+    border-radius: 14px;
+    
+}
+
+.item_5{
+    width: 300px;
+    position: relative;
+    left: 280px;
+}
+.item_5 img{
+    width: 70%;
+    position: relative;
+    top: 40px;
+    left: 45px;
+    border-radius: 14px;
+}
+
+.item_6{
+    width: 300px;
+    position: relative;
+    left: 280px;
+}
+.item_6 img{
+    width: 70%;
+    position: relative;
+    top: 40px;
+    left: 45px;
+    border-radius: 14px;
+}
+
+.price{
+    position: relative;
+    left: -40px;
+}
+.dombra{
+    position: relative;
+    top: -960px;
+    left: 330px;
+}
+
+.uru{
+    position: relative;
+    top: -1060px;
+    left: 700px;
+}
+.kobyz{
+    position: relative;
+    top: -1160px;
+    left: 1030px;
+}
+
+.drums{
+    position: relative;
+    top: -860px;
+    left: 350px;
+}
+
+.uku{
+    position: relative;
+    top: -960px;
+    left: 700px;
+}
+
+.gitara{
+    position: relative;
+    top: -1060px;
+    left: 1030px;
+}
+
+button{
+    background-color: #64F555;
+    cursor: pointer;
+    padding: 6px 15px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+}
+
+button:hover {
+    background-color: #5bc84d; 
+    transform: scale(1.1); 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+}
+
+.button-img{
+    position: relative;
+    left: -60px;
+}
+.button-img .dombra{
+    position: relative;
+    top: -1480px;
+    left: 400px;
+}
+
+.button-img .uru{
+    position: relative;
+    top: -1510px;
+    left: 730px;
+}
+
+.button-img .kobyz{
+    position: relative;
+    top: -1540px;
+    left: 1070px;
+}
+
+.button-img .drums{
+    position: relative;
+    top: -1140px;
+    left: 400px;
+}
+
+.button-img .uku{
+    position: relative;
+    top: -1160px;
+    left: 730px;
+}
+
+.button-img .gitara{
+    position: relative;
+    top: -1187px;
+    left: 1070px;
+}
+
+footer {
+     margin-top: 50px;
+    background-color: #142341; 
+    color: white; 
+    margin-top: 240px; 
+    text-align: center; 
+    position: relative; 
+    bottom: -60px;
+    width: 100%;
+    margin: 0;
+}
+
+footer h4 {
+    margin: 0; 
+    font-size: 24px; 
+    font-family: "Anton", sans-serif; 
+}
+
+footer p {
+    margin: 5px 0; 
+}
+
+footer a {
+    color: white; 
+    margin: 0 10px; 
+    text-decoration: none; 
+}
+
+footer a:hover {
+    text-decoration: underline; 
+}
+
+footer hr {
+    border: 1px solid white; 
+    margin: 20px 0; 
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 70%;
+    justify-content: space-around;
+    gap: 100px;
+    position: relative;
+    top: -900px;
+    left: 190px;
+}
+
+.card img{
+    width: 400px;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card{
+    width: 280px;
+    height: 360px;
+    padding: 2rem 1rem;
+    background-color: #225C80;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,o.5);
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover{
+    transform: translateY(20px);
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(34, 92, 128, 0.7), rgba(85, 145, 185, 1));
+    z-index: 2;
+    transition: .5s all;
+    opacity: 0;
+    border-radius: 20px;
+}
+
+.card:hover::before{
+    opacity: 1;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card .info{
+    position: relative;
+    z-index: 3;
+    color: white;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+}
+
+.card:hover .info{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.card .info h1{
+    margin: 0;
+}
+
+.card .info p{
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+   @media (max-width: 376px) {
+            header {
+        flex-direction: row;
+        gap: 170px;
+        position: relative;
+        left: 50px;
+        align-items: flex-start; 
+            }
+
+         header h1 {
+        font-size: 200%; 
+          }
+         
+          .wrapper{
+            display: grid;
+            grid-template-columns: repeat(2 , 1fr);
+            grid-template-rows: repeat(3 , 1fr);
+          }
+        .content {
+                grid-template-columns: repeat(3 , 1fr); 
+                position: relative;
+                top: 290px;
+                left: 100px;
+                height: 1500px;
+            }
+            .item {
+                left: 0; 
+                top: 20px; 
+                height: auto; 
+            }
+            .price {
+                grid-template-rows: 1fr;
+                text-align: center; 
+                left: -270px; 
+                top: 50px;
+            }
+            .button-img {
+                text-align: center; 
+                grid-template-rows: 1fr;
+                text-align: center; 
+                left: -340px;
+                top: 60px;
+            }
+
+            footer {
+        font-size: 14px; 
+        padding: 0px; 
+        width: 1120px;
+        position: relative;
+        bottom: -1500px;
+    }
+}
+
+       
+    </style>
+</head>
+<body>
+    
+    <header>
+       <a href="index.html" style="text-decoration: none;"><p>Home</p></a> 
+        <a href="work.html" style="text-decoration: none;"><p>Work</p></a>
+        <h1>Nyshan</h1>
+       <a href="artist.html" style="text-decoration: none;"><p>Artist</p></a> 
+        <a href="contact.html" style="text-decoration: none;"><p>Contact</p></a>
+     </header>
+
+     <div class="content">
+        <div class="item item_1"> <img src="C:\Users\kommu\Downloads\Dombra.jpeg"></div>
+        <div class="item item_2"> <img src="./kazakh-national-string-instrument-kylkobyz-260nw-1242814288.webp" alt=""></div>
+        <div class="item item_3"> <img src="./sybyzgy.jpg" alt=""></div>
+        <div class="item item_4"> <img src="./Drums.jpeg" alt=""></div>
+        <div class="item item_5"> <img src="./Без названия (92).jpeg " alt=""></div>
+        <div class="item item_6"> <img src="./Black acoustic guitar containing guitar, black, and rock, an Arts & Entertainment Photo by Mexico stock images.jpeg " alt=""></div>
+         </div>
+    
+         <div class="price">
+         <div class="dombra">
+            <h1>Kara Dombra</h1>
+            <h2>120.000tenge</h2>
+      </div>
+      <div class="uru">
+         <h1>Sybyzgy</h1>
+         <h2>10.000tenge</h2>
+      </div>
+      <div class="kobyz">
+         <h1>Kobyz</h1>
+         <h2>60.000tenge</h2>
+      </div>
+      <div class="drums">
+         <h1>Dayulpaz</h1>
+         <h2>30.000tenge</h2>
+      </div>
+      <div class="uku">
+        <h1>Ukelele</h1>
+        <h2>8,000tenge</h2>
+      </div>
+      <div class="gitara">
+        <h1>Gitara</h1>
+        <h2>60.000tenge</h2>
+      </div>
+      </div>
+
+      <div class="button-img">
+        <div class="dombra">
+           <button>BUY</button>
+     </div>
+     <div class="uru">
+        <button>BUY</button>
+     </div>
+     <div class="kobyz">
+        <button>BUY</button>
+     </div>
+     <div class="drums">
+        <button>BUY</button>
+     </div>
+     <div class="uku">
+        <button>BUY</button>
+     </div>
+     <div class="gitara">
+        <button>BUY</button>
+     </div>
+     </div>
+
+<div class="wrapper">
+        <div class="card">
+           <img src="./WhatsApp Image 2024-11-05 at 06.17.32 (1).jpeg" alt="">
+          <div class="info">
+              <h1>Nyshan</h1>
+              <p>The dombra is a traditional Kazakh instrument <br>with two strings, creating a deep <br>and expressive sound. It embodies <br> the spirit and culture <br> of the Kazakh people. </p>
+              
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./WhatsApp Image 2024-11-05 at 06.17.32.jpeg" alt="">
+           <div class="info">
+               <h1>Nyshan</h1>
+               <p>The dombra is a traditional Kazakh instrument <br>with two strings, creating a deep <br>and expressive sound. It embodies <br> the spirit and culture <br> of the Kazakh people. </p>
+               
+             </div>
+         </div>
+
+
+         <div class="card">
+            <img src="./WhatsApp Image 2024-11-05 at 06.17.33 (1).jpeg" alt="">
+           <div class="info">
+               <h1>Nyshan</h1>
+               <p>The dombra is a traditional Kazakh instrument <br>with two strings, creating a deep <br>and expressive sound. It embodies <br> the spirit and culture <br> of the Kazakh people. </p>
+              
+             </div>
+         </div>
+
+         <div class="card">
+            <img src="./WhatsApp Image 2024-11-05 at 06.17.33 (2).jpeg" alt="">
+           <div class="info">
+               <h1>Nyshan</h1>
+               <p>The dombra is a traditional Kazakh instrument <br>with two strings, creating a deep <br>and expressive sound. It embodies <br> the spirit and culture <br> of the Kazakh people. </p>
+               
+             </div>
+         </div>
+
+
+         <div class="card">
+            <img src="./WhatsApp Image 2024-11-05 at 06.17.33.jpeg" alt="">
+           <div class="info">
+               <h1>Nyshan</h1>
+               <p>The dombra is a traditional Kazakh instrument <br>with two strings, creating a deep <br>and expressive sound. It embodies <br> the spirit and culture <br> of the Kazakh people. </p>
+               
+             </div>
+         </div>
+
+
+         <div class="card">
+            <img src="./WhatsApp Image 2024-11-05 at 06.17.34.jpeg" alt="">
+           <div class="info">
+               <h1>Nyshan</h1>
+               <p>The dombra is a traditional Kazakh instrument <br>with two strings, creating a deep <br>and expressive sound. It embodies <br> the spirit and culture <br> of the Kazakh people. </p>
+               
+             </div>
+         </div>
+ </div>
+
+   
+     <footer>
+        <div>
+            <h4>Contact Us</h4>
+            <p>Email: Nyshanbusiness@gmail.com</p>
+            <p>Phone: +7 (707) 101 4714</p>
+            <div>
+                <a href="https://www.instagram.com/bas_perne?igsh=OWlnbzhtYjZpZWwx">Instagram</a>
+               
+            </div>
+        </div>
+        <hr>
+        <div>
+</body>
+</html>

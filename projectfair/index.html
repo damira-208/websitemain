@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projectfair</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+      <header>
+         <p>Home</p>
+         <a href="work.html" style="text-decoration: none;"><p>Work</p></a>
+         <h1>Nyshan</h1>
+        <a href="artist.html" style="text-decoration: none;"><p>Artist</p></a> 
+         <a href="contact.html" style="text-decoration: none;"><p>Contact</p></a>
+      </header>
+
+      <div>
+
+      </div>
+     
+      <div class="image-container">
+          <span style="--i: 1">
+            <img src="C:\Users\kommu\Downloads\Без названия (84).jpeg" alt="">
+          </span>
+
+          <span style="--i: 2">
+            <img src="C:\Users\kommu\Downloads\Укулеле эстетика.jpeg" alt="">
+          </span>
+
+          <span style="--i: 3">
+            <img src="C:\Users\kommu\Downloads\Bas_perne_dombyra_tabigat uilesimi.jpeg" alt="">
+          </span>
+
+          
+            <span style="--i: 4">
+                <img src="C:\Users\kommu\Downloads\Kazakh national handmade musical instruments with horsehair strings are sold in a street.jpeg" alt="">
+              </span>
+
+              <span style="--i: 5">
+                <img src="C:\Users\kommu\Downloads\Без названия (85).jpeg" alt="">
+              </span>
+
+              <span style="--i: 6">
+                <img src="C:\Users\kommu\Downloads\sybyzgy.jpeg" alt="">
+              </span>
+
+              <span style="--i: 7">
+                <img src="C:\Users\kommu\Downloads\wooden butterfly kalimba _3.jpeg" alt="">
+              </span>
+
+              <span style="--i: 8">
+                <img src="C:\Users\kommu\Downloads\Без названия (86).jpeg" alt="">
+              </span>
+          
+      </div>
+
+      <div class="btn-container">
+          <button class="btn" id="prev">Prev</button>
+          <button class="btn" id="next">Next</button>
+      </div>
+      
+
+      <video  autoplay loop muted>
+        <source src="C:\Users\kommu\Downloads\video.mp4" type="video/mp4">
+    </video>
+
+     <a href="dombra.html" style="text-decoration:  none;"><h3 id="instr">Instruments</h3></a> 
+      <div class="instruments">
+         <p>Dombra</p>
+         <p>Guitar</p>
+         <p>Drums </p>
+         <p>Ukulele </p>
+         <p>Shankobyz</p>
+         <p>Sybyzgy</p>
+         <p>Kobyz</p>
+      </div>
+
+
+      <div class="view">
+         <div class="block block_1"><img src="./【古琴Guqin】《卧龙吟》Depicting Zhuge Liang's soundtrack in the Romance of the Three Kingdoms犹闻辞后主，不复卧南阳.jpeg " alt=""></div>
+         <div class="block block_2"><img src="./Harmonium.jpeg" alt=""></div>
+         <div class="block block_3"><img src="./琴昇-墨简.jpeg" alt=""></div>
+         <div class="block block_4"><img src="./Без названия (87).jpeg " alt=""></div>
+         <div class="block block_5"><img src="./c6c2736c-66ba-465d-94d4-36b55f25f57a.jpeg" alt=""></div>
+</div>
+    
+
+<footer>
+  <div>
+      <h4>Contact Us</h4>
+      <p>Email: Nyshanbusiness@gmail.com</p>
+      <p>Phone: +7 (707) 101 4714</p>
+      <div>
+          <a href="https://www.instagram.com/bas_perne?igsh=OWlnbzhtYjZpZWwx">Instagram</a>
+          
+      </div>
+  </div>
+  <hr>
+  <div>
+      <p>&copy; 2024 Nyshan. All rights reserved.</p>
+      <a href="#">Terms of Service</a> | 
+      <a href="#">Privacy Policy</a>
+  </div>
+</footer>
+
+
+     <script>
+        const imageCon = document.querySelector(".image-container");
+    
+        const prevE1 = document.getElementById("prev"); // "ById" қателігі түзетілді
+        const nextE1 = document.getElementById("next"); // "ById" қателігі түзетілді
+    
+        let x = 0;
+        let timer = 0;
+    
+        prevE1.addEventListener("click", () => { // "addEventListener" қателігі түзетілді
+            x = x - 45;
+            clearTimeout(timer);
+            updateImage();
+        });
+    
+        nextE1.addEventListener("click", () => { // "next" батырмасы үшін тыңдаушы
+            x = x + 45;
+            clearTimeout(timer);
+            updateImage();
+        });
+    
+        function updateImage() {
+            imageCon.style.transform = `perspective(1000px) rotateY(${x}deg)`;
+            timer = setTimeout(() => {
+                x = x - 45;
+                updateImage();
+            }, 3000);
+        }
+        
+        let hasAnimated = false; 
+
+function addAnimation() {
+    if (!hasAnimated) { 
+        const blocks = document.querySelectorAll('.block');
+        blocks.forEach(block => {
+            block.classList.remove('fadeInPosition'); 
+            void block.offsetWidth; 
+            block.classList.add('fadeInPosition'); 
+        });
+
+        hasAnimated = true; 
+        window.removeEventListener('scroll', addAnimation); 
+    }
+}
+
+
+window.addEventListener('scroll', addAnimation);
+    </script>
+    
+</body>
+</html>

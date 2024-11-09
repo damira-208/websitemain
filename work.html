@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work</title>
+    <style>
+        body {
+            background-color: #EB7531;
+            overflow-x: hidden;
+            position: relative;
+            margin: 0; 
+            padding: 0; 
+            transition: background-color 0.3s ease;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            padding: 20px; 
+            position: relative;
+            left: 10px;
+            width: 100%; 
+        }
+
+        header p {
+            border: 2px solid white;
+            border-radius: 100px;
+            padding: 8px 12px;
+            cursor: pointer;
+            color: rgb(251, 247, 247);
+        }
+
+        header h1 {
+            font-family: "Anton", sans-serif;
+        }
+
+        .main h1 {
+            font-size: 660%; 
+            font-family: "Anton", sans-serif;
+            color: #862518;
+            opacity: 0; 
+            transform: translateY(50px); 
+            animation: slideUp 2s ease forwards; 
+            text-align: center; 
+        }
+
+        video {
+            width: 70%;
+            border-radius: 20px;
+            margin-top: 20px;
+            opacity: 0; 
+            transform: translateY(50px); 
+            animation: slideUp 2s ease forwards; 
+            position: relative;
+            left: 220px;
+        }
+
+        .page h1 {
+            font-size: 1200%; 
+            font-family: "Anton", sans-serif;
+            color: #0a175b;
+            opacity: 0; 
+            transform: translateY(50px); 
+            animation: slideUp 8s ease forwards; 
+            text-align: center; 
+            position: relative;
+            top: 40px;
+        }
+
+        .page img {
+            width: 40%; 
+            height: 500px; 
+            object-fit: cover;
+            border-radius: 15px;
+            opacity: 0.6; 
+            transform: translateY(50px); 
+            animation: slideUp 2s ease forwards; 
+            display: block; 
+            margin: 0 auto; 
+            z-index: -1;
+            position: relative;
+            top: -480px;
+        }
+
+        .text-container {
+            position: relative;
+             top: -220px;
+             left: -420px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            perspective: 800px;
+            margin: 20px 0; 
+            opacity: 0; 
+            transform: translateY(50px); 
+            animation: slideUp 2s ease forwards; 
+        }
+
+        .text-container span {
+            position: absolute;
+            font-size: 24px;
+            font-weight: bold;
+            animation: rotateText 10s linear infinite;
+            transform-origin: 0 0; 
+        }
+       
+
+        .text-container span:nth-child(n) {
+            transform: rotate(calc(var(--i) * 10deg)) translate(100px);
+        }
+
+        .circle{
+            position: relative;
+            top: 20px;
+        }
+          .circle1{
+            position: relative;
+            top: 230px;
+            left: 720px;
+          }
+
+        .circle2 img{
+          width: 420px;
+          height: 300px;
+          object-fit: cover;
+          border-radius: 20px;
+          opacity: 0; 
+            transform: translateY(50px); 
+            animation: slideUp 2s ease forwards; 
+            transition: transform 0.3s ease; 
+            overflow: hidden; 
+        }
+
+        .circle2 :hover{
+            transform: scale(1.1); 
+            z-index: 1; 
+        }
+         .circle2 .dombra{
+            position: relative;
+            top: -460px;
+            left: 700px;
+           
+         }
+
+         .circle2 .ui{
+            position: relative;
+            top: -90px;
+            left: 00px;
+         }
+
+         .circle2 .kyz{
+            position: relative;
+            top: 250px;
+            left: 00px;
+         }
+        .circle{
+            position: relative;
+            top: 630px;
+            left: 20px;
+          }
+
+          footer {
+             background-color: #031d45; 
+             color: white; 
+             margin-top: 240px; 
+             text-align: center; 
+             position: relative; 
+             bottom: -60px;
+}
+
+footer h4 {
+    margin: 0; 
+    font-size: 24px; 
+    font-family: "Anton", sans-serif; 
+}
+
+footer p {
+    margin: 5px 0; 
+}
+
+footer a {
+    color: white; 
+    margin: 0 10px; 
+    text-decoration: none; 
+}
+
+footer a:hover {
+    text-decoration: underline; 
+}
+
+footer hr {
+    border: 1px solid white; 
+    margin: 20px 0; 
+}
+
+
+.artistt{
+    position: relative;
+    left: -20px;
+}
+
+        @keyframes rotateText {
+            0% {
+                transform: rotate(calc(var(--i) * 10deg)) translate(100px);
+            }
+            100% {
+                transform: rotate(calc(var(--i) * 10deg + 360deg)) translate(100px);
+            }
+        }
+
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0); 
+            }
+        }
+
+        @media (max-width: 376px) {
+    header {
+        flex-direction: row;
+        gap: 170px;
+        position: relative;
+        left: 200px;
+        align-items: flex-start; 
+    }
+
+    header h1 {
+        font-size: 200%; 
+    }
+
+    .main h1 {
+        color: white;
+        font-size: 900%; 
+        position: relative;
+        left: 420px;
+    }
+
+    video {
+        position: relative;
+        left: 70px;
+        top: 200px;
+        width: 1300px;
+    }
+
+    .page h1 {
+        font-size: 300px;
+         position: relative;
+         top: 700px;
+         left: 300px;
+
+    }
+
+    .page img {
+        width: 800px; 
+        height: auto; 
+        flex-direction: column;
+        align-items: flex-start; 
+        position: relative;
+        top: -240px;
+        left: 380px;
+    }
+
+    .text-container {
+        flex-direction: column; 
+        top: 40px; 
+    }
+
+    .circle {
+        top: 900px; 
+        left: 900px; 
+        width: 100%; 
+    }
+    
+    .circle1, .circle2 {
+        width: 100%; 
+        display: flex; 
+        justify-content: center; 
+        flex-direction: column;
+        align-items: flex-start; 
+    }
+    .circle2 .dombra{
+        position: relative;
+        top: -200px;
+        left: 500px;
+    }
+
+    .circle2 .ui{
+        position: relative;
+        left: 500px;
+    }
+
+    .circle2 .kyz{
+        position: relative;
+        top: -30px;
+        left: 500px;
+    }
+    footer {
+        font-size: 14px; 
+        padding: 0px; 
+        width: 1500px;
+    }
+}
+        
+
+    </style>
+</head>
+<body>
+    <header>
+       <a href="index.html" style="text-decoration: none;"><p>Home</p></a> 
+        <p>Work</p>
+        <h1>Nyshan</h1>
+      <a href="artist.html" style="text-decoration: none;"><p>Artist</p></a>  
+        <a href="contact.html" style="text-decoration: none;"><p class="artistt">Contact</p></a>
+    </header>
+    <div class="main"> <h1>Instrument</h1></div>
+    <hr>
+    <video autoplay loop muted>
+        <source src="./IMG_0262.MP4">
+        <p>Effect of kazakh musical instruments</p>
+    </video>
+    
+    <div class="page">
+        <h1>Dombra</h1>
+        <img src="C:\Users\kommu\Downloads\🇰🇿The Qazaq’s Musical Soul_ Dombyra.jpeg" alt="">
+    </div>
+
+    <div class="text-container">
+        <span style="--i: 1">M</span>
+        <span style="--i: 2">A</span>
+        <span style="--i: 3">G</span>
+        <span style="--i: 4">A</span>
+        <span style="--i: 5">N</span>
+        <span style="--i: 6"> </span>
+        <span style="--i: 7">Q</span>
+        <span style="--i: 8">A</span>
+        <span style="--i: 9">Z</span>
+        <span style="--i: 10">A</span>
+        <span style="--i: 11">Q</span>
+        <span style="--i: 12"> </span>
+        <span style="--i: 13">D</span>
+        <span style="--i: 14">A</span>
+        <span style="--i: 15">L</span>
+        <span style="--i: 16">A</span>
+        <span style="--i: 17">S</span>
+        <span style="--i: 18">Y</span>
+        <span style="--i: 19"> </span>
+        <span style="--i: 20">A</span>
+        <span style="--i: 21">N</span>
+        <span style="--i: 22"> </span>
+        <span style="--i: 23">S</span>
+        <span style="--i: 24">A</span>
+        <span style="--i: 25">L</span>
+        <span style="--i: 26">Y</span>
+        <span style="--i: 27">P</span>
+        <span style="--i: 28"> </span>
+        <span style="--i: 29">T</span>
+        <span style="--i: 30">Y</span>
+        <span style="--i: 31">R</span>
+        <span style="--i: 32">G</span>
+        <span style="--i: 33">A</span>
+        <span style="--i: 34">N</span>
+        <span style="--i: 35">D</span>
+        <span style="--i: 36">A</span>
+        <span style="--i: 37">I</span>
+        
+    </div>
+    
+    <div class="circle">
+        <div class="text-container">
+            <span style="--i: 1">T</span>
+            <span style="--i: 2">i</span>
+            <span style="--i: 3">l</span>
+            <span style="--i: 4"> </span>
+            <span style="--i: 5">z</span>
+            <span style="--i: 6">h</span>
+            <span style="--i: 7">e</span>
+            <span style="--i: 8">t</span>
+            <span style="--i: 9">k</span>
+            <span style="--i: 10">i</span>
+            <span style="--i: 11">z</span>
+            <span style="--i: 12">b</span>
+            <span style="--i: 13">e</span>
+            <span style="--i: 14">s</span>
+            <span style="--i: 15">t</span>
+            <span style="--i: 16">i</span>
+            <span style="--i: 17"> </span>
+            <span style="--i: 18">a</span>
+            <span style="--i: 19">n</span>
+            <span style="--i: 20"> </span>
+            <span style="--i: 21">z</span>
+            <span style="--i: 22">h</span>
+            <span style="--i: 23">e</span>
+            <span style="--i: 24">t</span>
+            <span style="--i: 25">k</span>
+            <span style="--i: 26">i</span>
+            <span style="--i: 27">z</span>
+            <span style="--i: 28">e</span>
+            <span style="--i: 29">d</span>
+            <span style="--i: 30">i</span>
+        </div>
+    </div>
+
+    <div class="circle1">
+        <div class="text-container">
+            <span style="--i: 1">T</span>
+            <span style="--i: 2">i</span>
+            <span style="--i: 3">l</span>
+            <span style="--i: 4"> </span>
+            <span style="--i: 5">z</span>
+            <span style="--i: 6">h</span>
+            <span style="--i: 7">e</span>
+            <span style="--i: 8">t</span>
+            <span style="--i: 9">k</span>
+            <span style="--i: 10">i</span>
+            <span style="--i: 11">z</span>
+            <span style="--i: 12">b</span>
+            <span style="--i: 13">e</span>
+            <span style="--i: 14">s</span>
+            <span style="--i: 15">t</span>
+            <span style="--i: 16">i</span>
+            <span style="--i: 17"> </span>
+            <span style="--i: 18">a</span>
+            <span style="--i: 19">n</span>
+            <span style="--i: 20"> </span>
+            <span style="--i: 21">z</span>
+            <span style="--i: 22">h</span>
+            <span style="--i: 23">e</span>
+            <span style="--i: 24">t</span>
+            <span style="--i: 25">k</span>
+            <span style="--i: 26">i</span>
+            <span style="--i: 27">z</span>
+            <span style="--i: 28">e</span>
+            <span style="--i: 29">d</span>
+            <span style="--i: 30">i</span>
+        </div>
+    </div>
+    
+    <div class="circle2">
+        <img src="C:\Users\kommu\Downloads\Dombra.jpeg" class="dombra" alt="Dombra">
+        <img src="./Kazakh aesthetics.jpeg " class="ui" alt="Kazakh Aesthetics">
+        <img src="./Без названия (91).jpeg " class="kyz" alt="Kyz">
+    </div>
+    <footer>
+        <div>
+            <h4>Contact Us</h4>
+            <p>Email: Nyshanbusiness@gmail.com</p>
+            <p>Phone: +7 (707) 101 4714</p>
+            <div>
+                <a href="https://www.instagram.com/bas_perne?igsh=OWlnbzhtYjZpZWwx">Instagram</a>
+                
+            </div>
+        </div>
+        <hr>
+        <div>
+            <p>&copy; 2024 Nyshan. All rights reserved.</p>
+            <a href="#">Terms of Service</a> | 
+            <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+    
+    <script>
+        
+        function changeBackgroundColor() {
+            const dombraSection = document.querySelector('.page');
+            const rect = dombraSection.getBoundingClientRect(); 
+
+            
+            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                document.body.style.backgroundColor = '#225C80'; // Фон түсі қара көкке өзгереді
+            } else {
+                document.body.style.backgroundColor = '#EB7531'; // Алғашқы фон түсі
+            }
+        }
+
+        
+        window.addEventListener('scroll', changeBackgroundColor);
+    </script>
+</body>
+</html>
